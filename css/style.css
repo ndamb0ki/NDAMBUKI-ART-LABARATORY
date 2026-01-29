@@ -28,47 +28,48 @@ h3 {
   font-size: 1.4rem;
 }
 .navbar {
-  background: white;
-  padding: 1rem 3rem;
+  background: #b3e5fc;
+  padding: 1rem;
+}
+
+.nav-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
-.logo {
-  font-family: 'Patrick Hand SC', cursive;
-  font-size: 1.6rem;
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  position: relative;
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+  }
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #ff5fa2;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
 .page-hero {
   padding: 5rem 2rem;
   text-align: center;
@@ -1015,3 +1016,4 @@ body {
     text-align: center;
   }
 }
+
