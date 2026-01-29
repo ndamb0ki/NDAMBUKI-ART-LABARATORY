@@ -951,4 +951,58 @@ body {
   color: white;
   font-family: 'Patrick Hand SC', cursive;
 }
+/* NAVBAR BASE */
+.navbar {
+  background: #b3e5fc;
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TOGGLE BUTTON */
+.nav-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: #b3e5fc;
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* enough to show all links */
+  }
+
+  .nav-links li {
+    padding: 0.8rem 0;
+    text-align: center;
+  }
+}
+
 
