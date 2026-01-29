@@ -1,3 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: 'Patrick Hand SC', cursive;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+.navbar {
+  background: white;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.6rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff5fa2;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+.page-hero {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff1f6, #fdfdfd);
+}
+
+.page-hero h1 {
+  color: #ff5fa2;
+}
+
+.page-hero p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
+  color: #555;
+}
+.bento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 3rem;
+}
+
+.bento-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bento-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.bento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+.bento-text {
+  padding: 1.2rem 1.4rem;
+}
+
+.bento-text h3 {
+  margin-bottom: 0.4rem;
+}
+
+.bento-text p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.site-footer {
+  background: #111;
+  color: #eee;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-links {
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: #ff5fa2;
+  margin: 0 0.8rem;
+  text-decoration: none;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
 /* RESET */
 * {
   margin: 0;
@@ -800,3 +951,4 @@ body {
   color: white;
   font-family: 'Patrick Hand SC', cursive;
 }
+
